@@ -1,0 +1,297 @@
+.supported-and-clients{
+    width: 100%;
+    height: 875px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    background-color: var(--gray-200-color);
+}
+
+.ci1, .ci2, .ci3, .ci4, .ci5, .ci6{
+    height: 75px;
+    width: 150px;
+
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: .3s;
+}
+
+.ci1{
+    background-image: url(../images/ic-logo.png);
+}
+
+.ci2{
+    background-image: url(../images/hf-logo.png);
+}
+
+.ci3{
+    background-image: url(../images/sc-logo.png);
+}
+
+.ci4{
+    background-image: url(../images/hh-logo.png);
+}
+
+.ci5{
+    background-image: url(../images/fs-logo.png);
+}
+
+.ci6{
+    background-image: url(../images/sr-logo.png);
+}
+
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-256px * 6))}
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-256px * 6))}
+}
+
+.sliderline {
+	height: 75px;
+	overflow:hidden;
+	position: relative;
+	width: 65%;
+}
+
+.slideline-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    gap: 106px;
+    width: calc(150px * 6);
+}
+
+.slide-sc {
+    height: 75px;
+    width: 150px;
+}
+
+
+.ci1:hover, .ci2:hover, .ci3:hover, .ci4:hover, .ci5:hover, .ci6:hover{
+    transform: scale(1.1);
+}
+
+.ci1:hover{
+    background-image: url(../images/ic-logo-hover.png);
+}
+
+.ci2:hover{
+    background-image: url(../images/hf-logo-hover.png);
+}
+
+.ci3:hover{
+    background-image: url(../images/sc-logo-hover.png);
+}
+
+.ci4:hover{
+    background-image: url(../images/hh-logo-hover.png);
+}
+
+.ci5:hover{
+    background-image: url(../images/fs-logo-hover.png);
+}
+
+.ci6:hover{
+    background-image: url(../images/sr-logo-hover.png);
+}
+
+.supported-and-clients{
+    padding-top: 80px;
+}
+
+.supported-and-clients h1{
+    margin-bottom: 30px
+}
+
+.client-saying{
+    width: 65%;
+    height: 450px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 135px;
+}
+
+.client-saying-info{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 600px;
+}
+.client-saying-info h1{
+    text-align: start;
+}
+
+.client-saying-photo{
+    background-image: url(../images/man-client-saying.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .3s;
+    cursor: pointer;
+
+    width: 495px;
+    height: 550px;
+    position: relative;
+}
+
+.client-saying-photo:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+}
+
+.client-slider-info{
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+
+#csi-1, #cnp-1{
+    display: flex;
+}
+
+.client-comment-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+
+#csi-slider-1{
+    display: flex;
+}
+
+
+.client-comment, .client-name{
+    font-family: var(--main-font);
+    font-size: 16px;
+    line-height: 160%; 
+}
+
+.client-comment{
+    color: var(--gray-800-color);
+    font-weight: 400;
+}
+
+.client-name-and-arrows{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.client-name-position{
+    display: none;
+    flex-direction: column;
+    align-items: start;
+}
+
+.client-name{
+    color: var(--gray-900, #1E212C);
+    font-weight: 700;
+}
+
+.client-position{
+    color: var(--gray-700-color);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+@media screen and (max-width: 1919px) {
+    .client-saying{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .supported-and-clients h1, .client-saying h1{
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .client-saying{
+        gap: 0px;
+    }
+
+    .client-saying h1{
+        text-align: center;
+    }
+
+    .client-saying-photo{
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .sliderline{
+        width: 90%;
+    }
+
+    .client-saying-info{
+        gap: 10px;
+    }
+
+    .client-saying{
+        margin-top: 60px;
+    }
+
+    .supported-and-clients{
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .supported-and-clients h1, .client-saying h1{
+        font-size: 26px;
+    }
+
+    .supported-and-clients{
+        height: 750px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .client-name-and-arrows{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .client-comment-info, .client-slider-info{
+        align-items: center;
+    }
+
+    .client-slider-info img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .client-name-position{
+        align-items: center;
+    }
+
+    .supported-and-clients{
+        height: 850px;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .supported-and-clients h1, .client-saying h1{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+:root{
+    --orange-main-color: #FF5A30;
+    --gray-main-bg-color: #F4F5F6;
+    --gray-200-color: #F4F5F6;
+    --gray-400-color: #D7DADD;
+    --gray-700-color: #787A80;
+    --gray-600-color: #9A9CA5;
+    --gray-800-color: #424551;
+    --gray-900-color: #1E212C;
+    --main-font: Ubuntu, sans-serif;
+}
+button{
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+input{
+    outline: none;
+}
+
+h1{
+    color: var(--gray-900-color);
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+h2{
+    color: var(--gray-700-color);
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+h3{
+    color: var(--gray-900-color);
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+h4{
+    color: white;
+    font-family: var(--main-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+
+h6{
+    color: white;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-subtitle{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.form-btn-input{
+    border-radius: 4px;
+    background: var(--orange-main-color);
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    height: 45px;
+    width: 100%;
+    border: none;
+    transition: .3s;
+}
+
+.form-btn-input:hover{
+    transform: scale(1.1);
+}
+ 
+.form-btn-input:active{
+    transform: scale(1);
+    opacity: 0,7;
+}
+

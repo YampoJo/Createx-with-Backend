@@ -1,0 +1,289 @@
+.menu {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+
+    display: flex;
+    align-items: center;
+
+    z-index: 20;
+}
+
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+
+    z-index: 20;
+}
+
+.burger {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+
+    z-index: 20;
+}
+
+.burger::before, .burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: var(--orange-main-color);
+
+    z-index: 20;
+}
+
+.burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 var(--orange-main-color);
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+
+    z-index: 20;
+}
+
+.burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+
+    z-index: 20;
+}
+
+.burger-checkbox:checked+.burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+
+    z-index: 20;
+}
+
+.burger-checkbox:checked+.burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+
+    z-index: 20;
+}
+
+.menu-list {
+    top: 92px;
+    right: 0;
+    position: absolute;
+    display: grid;
+    gap: 5px;
+    padding: 10px 0;
+    margin: 0;
+    background: white;
+    list-style-type: none;
+    transform: translateX(100%);
+    transition: .3s;
+    width: 200px;
+    z-index: 20;
+}
+
+.menu-item {
+    display: block;
+    padding: 8px;
+    color: black;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 160%;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+
+    z-index: 20;
+}
+
+.menu-list li span{
+    color: var(--orange-main-color);
+}
+
+.menu-list li span:hover{
+    transform: scale(1);
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    color: var(--orange-main-color);
+}
+
+.burger-checkbox:checked~.menu-list {
+    transform: translateX(0);
+}
+
+.navbar,
+.navbar-elements,
+.nav-menu-ul,
+.nav-back,
+.nav-back-element,
+.nav-back-info {
+    display: flex;
+}
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+
+    background-color: white;
+    width: 100%;
+    height: 92px;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 20;
+}
+
+.navbar-elements {
+    width: 65%;
+    height: 52px;
+    background-color: white;
+
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 20;
+}
+
+#nav-logo {
+    height: 22px;
+
+    z-index: 20;
+}
+
+.nav-menu-ul {
+    width: 40%;
+    height: 26px;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    z-index: 20;
+}
+
+.nav-menu-ul li {
+    list-style-type: none;
+
+    z-index: 20;
+}
+
+.nav-menu-ul li a {
+    text-decoration: none;
+    color: var(--gray-800-color);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 160%;
+
+    z-index: 20;
+}
+
+.nav-menu-ul li a:hover,
+.nav-menu-ul li:hover {
+    transition: .3s;
+}
+
+.nav-menu-ul li a:hover {
+    color: var(--orange-main-color);
+}
+
+.nav-menu-ul li:hover {
+    transform: scale(1.1);
+}
+
+.nav-back {
+    width: 40%;
+    height: 48px;
+
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 20;
+}
+
+.nav-back-element {
+    width: 50%;
+    height: 48px;
+
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    z-index: 20;
+}
+
+.nav-back-title,
+.nav-back-subtitle {
+    font-family: var(--main-font);
+    line-height: 150%;
+
+    z-index: 20;
+}
+
+.nav-back-info {
+    flex-direction: column;
+
+    z-index: 20;
+}
+
+.nav-back-title {
+    color: var(--gray-800-color);
+    font-size: 14px;
+    font-weight: 700;
+
+    z-index: 20;
+}
+
+.nav-back-subtitle {
+    color: var(--gray-900-color);
+    font-size: 18px;
+    font-weight: 400;
+
+    z-index: 20;
+}
+
+@media screen and (max-width: 1660px) {
+    .navbar-elements {
+        width: 94%;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .nav-back {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+    .nav-menu-ul {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .nav-menu-ul {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+    .menu {
+        visibility: visible;
+        width: 40px;
+        height: 40px;
+    }
+}

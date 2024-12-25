@@ -1,0 +1,200 @@
+.discuss-detail{
+    width: 100%;
+    height: 826px;
+    
+    background-image: url(../images/discuss-detail-bg.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-div{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.discuss-form{
+    width: 495px;
+    height: 666px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 26px 24px -10px rgba(30, 33, 44, 0.10), 0px 60px 80px -20px rgba(30, 33, 44, 0.16);
+
+}
+
+.discuss-form-params{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 570px;
+    justify-content: start;
+    gap: 24px;
+}
+
+.discuss-points{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.discuss-point{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.discuss-checkbox{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 0px;
+}
+
+.ob-fieldDis{
+    font-size: 15px;
+    color: var(--orange-main-color);
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.discuss-checkbox label{
+    color: var(--gray-800-color);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    width: 80%;
+}
+
+#checkbox-disc{
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;   
+    z-index: 5; 
+}
+
+#discuss-btn{
+    opacity: 0.7;
+}
+
+.cb-checked {
+    background: white;
+    width: 20px;
+    height: 20px;
+    transition: .3s;
+    border: 1px solid black;
+    border-radius: 4px;
+    position: relative;
+    right: 20px;
+    z-index: 4;
+  }
+
+
+#checkbox-disc:checked ~ .cb-checked{
+    background-image: url(../images/checkbox-checked.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: none;
+  }
+
+
+.discuss-param, #discuss-param-msg, .discuss-point label{
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.discuss-param{
+    width: 100%;
+}
+
+.discuss-param, #discuss-param-msg{
+    padding-left: 15px;
+    height: 45px;
+    color: var(--gray-600-color );
+    border-radius: 4px;
+    border: 1px solid var(--gray-400-color);
+    background: var(--gray-200-color);
+
+}
+
+.discuss-point label{
+    color: var(--gray-800-color); 
+}
+
+.discuss-btn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-btn-input{
+    width: 174px;
+}
+
+@media screen and (max-width: 830px) {
+    .discuss-form-params h3{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .form-div{
+        width: 90%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .discuss-form-params{
+        width: 90%;
+    }
+    .cb-checked{
+        width: 25px;
+        height: 25px;
+
+        top: 35px;
+        right: 0px;
+    }
+    .discuss-checkbox{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .discuss-form-params h3{
+        font-size: 20px;
+    }
+
+    .discuss-form{
+        height: 700px;
+        padding-top: 30px;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .discuss-form-params h3{
+        font-size: 20px;
+    }
+}
